@@ -1,0 +1,16 @@
+<body>
+  <p>Book Review</p>
+
+  <ul>
+    ${data.map(entry => `
+    <li>
+      ${entry.book_author}: ${entry.book_name}
+      <a href="books/${entry.id}">See Reviews</a>
+    </li>
+    ` ).join('')}
+  </ul>
+
+  <a href="/users/signup">Sign up to review a book</a>
+  <br />
+  <a href="/users/login">Login</a>
+</body>

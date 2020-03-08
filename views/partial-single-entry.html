@@ -1,0 +1,35 @@
+<body>
+    ${data.map(book => { return `
+    <p>Author: ${book.book_author}</p>
+    <p>Book: ${book.book_name}</p>
+    ` }).join('')}
+    
+    </br>
+    <hr />
+    <h2>Leave your review of this book:</h2>
+    <form action="/" method="POST">
+      <input type="hidden" name="book_id" value="${data[0].id}" />
+      <label
+        >Title
+        <input type="text" name="reviews_title" placeholder="Review Title" />
+      </label>
+      <label
+        >My Review
+        <textarea
+          name="review_review"
+          placeholder="My review of this book..."
+        ></textarea>
+      </label>
+      <button type="submit">Save Review</button>
+    </form>
+    
+    </br>
+    <hr />
+    <h2>User Reviews</h2>
+   
+    
+    <a href="/">Return to Homepage</a>
+    </br>
+    <a href="/users/login">Login</a>
+    </body>
+    
