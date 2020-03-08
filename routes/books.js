@@ -9,7 +9,7 @@ router.get("/:entry_id?", async (req, res, next) => {
 
   res.render("template", {
     locals: {
-      title: data[0].name_book,
+      title: data[0].book_name,
       data: data,
       reviews: reviews
     },

@@ -45,8 +45,8 @@ class BookModel {
     // get all the reviews for a given book given a specific book id.
     try {
       const response = await db.any(
-        `SELECT book.book_name , reviews.title , reviews.stars, reviews.review, users.first_name, users.last_name 
-                from books   INNER JOIN  reviews ON books.id = reviews.books_id 
+        `SELECT books.book_name , reviews.title , reviews.stars, reviews.review, users.first_name
+                from books   INNER JOIN  reviews ON books.id = reviews.book_id 
                 INNER JOIN users on users.id = reviews.users_id WHERE reviews.book_id = ${bookID}`
       );
       return response;

@@ -26,7 +26,12 @@
     </br>
     <hr />
     <h2>User Reviews</h2>
-   
+    ${reviews.map(review => { return `
+      <h3>Review Title: ${review.title}</h3>
+      <p>Review: ${review.review}</p>
+      <p>Stars: ${review.stars}</p>
+      
+      ` }).join('')}
     
     <a href="/">Return to Homepage</a>
     </br>
