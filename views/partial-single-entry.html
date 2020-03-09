@@ -6,6 +6,7 @@
     
     </br>
     <hr />
+    ${ !!is_logged_in ?`
     <h2>Leave your review of this book:</h2>
     <form action="/" method="POST">
       <input type="hidden" name="book_id" value="${data[0].id}" />
@@ -22,7 +23,8 @@
       </label>
       <button type="submit">Save Review</button>
     </form>
-    
+    ` : `<p>Login to submit a review</p>
+    `}
     </br>
     <hr />
     <h2>User Reviews</h2>
@@ -35,6 +37,5 @@
     
     <a href="/">Return to Homepage</a>
     </br>
-    <a href="/users/login">Login</a>
     </body>
     
