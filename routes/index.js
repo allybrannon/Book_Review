@@ -22,11 +22,13 @@ router.get("/", async function(req, res, next) {
 
 router.post("/", async function(req, res) {
   console.log("req body:", req.body);
-  const { book_id, review_title, review_text } = req.body;
+  const user_id = req.session.user_id;
+  const { book_id, reviews_title, review_review } = req.body;
   const postData = await bookModel.addReview(
+    user_id,
     book_id,
-    review_title,
-    review_text
+    reviews_title,
+    review_review
   );
   console.log(postData);
   res.sendStatus(200);
