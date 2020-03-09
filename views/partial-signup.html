@@ -1,25 +1,39 @@
-<body>
-  <form action="/users/signup" method="POST">
-    <label
-      >First Name
-      <input type="text" name="first_name" />
-    </label>
-    <label>
-      Last Name
-      <input type="text" name="last_name" />
-    </label>
-    <label
-      >Email
-      <input type="text" name="email" />
-    </label>
-    <label
-      >Password
-      <input type="password" name="password" />
-    </label>
-    <button type="submit">Register</button>
-  </form>
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Review</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+</head>
+<html lang="en">
+  <body>
+    <form action="/users/signup" method="POST">
+      <label
+        >First Name
+        <input type="text" name="first_name" />
+      </label>
+      <label>
+        Last Name
+        <input type="text" name="last_name" />
+      </label>
+      <label
+        >Email
+        <input type="text" name="email" />
+      </label>
+      <label
+        >Password
+        <input type="password" name="password" />
+      </label>
+      <button type="submit">Register</button>
+    </form>
 
-  <a href="/">Return to Homepage</a>
-  <br />
-  <a href="/users/login">Login</a>
-</body>
+    <a href="/">Return to Homepage</a>
+    <br />
+    <a href="/users/login">Login</a>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

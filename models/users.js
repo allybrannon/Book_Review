@@ -27,7 +27,6 @@ class User {
     }
   }
   async loginUser() {
-    console.log("logging in user");
     try {
       const response = await db.one(
         `SELECT id, first_name, last_name, password FROM users WHERE email = $1;`,

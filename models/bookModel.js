@@ -33,7 +33,6 @@ class BookModel {
                 VALUES ($1,$2,$3,$4,$5) RETURNING id`,
         [users_id, r_id, review_title, review_text, 5]
       );
-      console.log(response);
       return response;
     } catch (error) {
       console.log("Error:", error);
